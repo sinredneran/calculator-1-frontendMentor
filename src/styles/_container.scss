@@ -1,0 +1,163 @@
+@import './variables';
+
+$box-shadow-y : 5px;
+
+.container {
+    // outline: 1px solid red;
+    width: 600px;
+    transition: all 0.5s;
+}
+
+.theme_1 {
+    header {
+        color: white;
+
+        & .theme-switch-container {
+            & .theme-btn-container {
+                & .ball-container {
+                    background-color: #232c43;
+                    & .ball{
+                        background-color: hsl(6, 63%, 50%);
+                        left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .key-container {
+        background-color: $toggle-bg;
+
+        button {
+            background-color: $key-bg;
+            color: $text-secondary;
+            box-shadow: 0 $box-shadow-y $key-shadow;
+        }
+
+        .handleDelete,
+        .handleReset {
+            background-color: $key-bg-special;
+            box-shadow: 0 $box-shadow-y $key-shadow-special;
+            color: white;
+        }
+
+        .handleResult {
+            background-color: $key-bg-toggle;
+            box-shadow: 0 $box-shadow-y $key-shadow-toggle;
+            color: white;
+        }
+    }
+
+    .output-container {
+        background-color: $screen-bg;
+        color: $text-primary;
+    }
+}
+
+.theme_2 {
+    header {
+        color: hsl(60, 10%, 19%);
+
+        & .theme-switch-container {
+            & .theme-btn-container {
+                & .ball-container {
+                    background-color: hsl(0, 5%, 81%);
+
+                    & .ball {
+                        background-color: hsl(25, 98%, 40%);
+                        left: calc(50% - 10px);
+                       
+                    }
+                }
+            }
+        }
+    }
+
+    .key-container {
+        background-color: hsl(0, 5%, 81%);
+
+        button {
+            background-color: hsl(45, 7%, 89%);
+            color: hsl(60, 10%, 19%);
+            box-shadow: 0 $box-shadow-y hsl(35, 11%, 61%);
+        }
+
+        .handleDelete,
+        .handleReset {
+            background-color: hsl(185, 42%, 37%);
+            box-shadow: 0 $box-shadow-y hsl(185, 58%, 25%);
+            color: white;
+        }
+
+        .handleResult {
+            background-color: hsl(25, 98%, 40%);
+            box-shadow: 0 $box-shadow-y hsl(25, 99%, 27%);
+            color: hsl(0, 0, 100%);
+        }
+    }
+
+    .output-container {
+        background-color: hsl(0, 0%, 93%);
+        color: hsl(60, 10%, 19%);
+    }
+}
+
+.theme_3 {
+    header {
+        color: hsl(52, 100%, 62%);
+
+        & .theme-switch-container {
+            & .theme-btn-container {
+                & .ball-container {
+                    background-color: hsl(268, 71%, 12%);
+
+                    & .ball {
+                        background-color: hsl(176, 100%, 44%);
+                        left: calc(100% - 25px);
+                    }
+                }
+            }
+        }
+    }
+
+    .key-container {
+        background-color: hsl(268, 71%, 12%);
+
+        button {
+            background-color: hsl(268, 47%, 21%);
+            color: hsl(52, 100%, 62%);
+            box-shadow: 0 $box-shadow-y hsl(290, 70%, 36%);
+        }
+
+        .handleDelete,
+        .handleReset {
+            background-color: hsl(281, 89%, 26%);
+            box-shadow: 0 $box-shadow-y hsl(285, 91%, 52%);
+            color: white;
+        }
+
+        .handleResult {
+            background-color: hsl(176, 100%, 44%);
+            box-shadow: 0 $box-shadow-y hsl(177, 92%, 70%);
+            color: hsl(198, 20%, 13%);
+        }
+    }
+
+    .output-container {
+        background-color: hsl(268, 47%, 21%);
+        color: hsl(52, 100%, 62%);
+    }
+}
+
+@media screen and (max-width: 1439px) {
+    .container{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 449px) {
+    .container{
+        width: 340px;
+    }
+}
+

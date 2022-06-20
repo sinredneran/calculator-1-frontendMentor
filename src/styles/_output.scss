@@ -1,0 +1,20 @@
+@import './variables';
+
+.output-container {
+    width: 100%;
+    background-color: $screen-bg;
+    color: $text-primary;
+    border-radius: 10px;
+    text-align: right;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    padding: 0 1em;
+}
+
+@media screen and (max-width: 1439px) {
+    .output-container{
+        padding: 0 0.5em;
+    }
+}

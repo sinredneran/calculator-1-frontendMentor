@@ -1,0 +1,82 @@
+@import './variables';
+
+$box-shadow-y : 5px;
+
+.key-container {
+    background-color: $toggle-bg;
+    margin-top: 0.5em;
+    padding: 1em 1em;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+
+    & :last-child {
+        grid-column: 3/5;
+    }
+
+    & :nth-child(17) {
+        grid-column: 1/3;
+    }
+
+    button {
+        background-color: $key-bg;
+        border: none;
+        border-radius: 10px;
+        color: $text-secondary;
+        padding: 0.25em 0.5em 0.15em;
+        font-size: 1rem;
+        font-weight: 700;
+        box-shadow: 0 $box-shadow-y $key-shadow;
+
+        &:active {
+            transform: translateY(5px);
+            box-shadow: none;
+        }
+    }
+
+    .handleDelete,
+    .handleReset {
+        background-color: $key-bg-special;
+        box-shadow: 0 $box-shadow-y $key-shadow-special;
+        color: white;
+
+        &:active {
+            transform: translateY(5px);
+            box-shadow: none;
+        }
+    }
+
+    .handleResult {
+        background-color: $key-bg-toggle;
+        box-shadow: 0 $box-shadow-y $key-shadow-toggle;
+        color: white;
+
+        &:active {
+            transform: translateY(5px);
+            box-shadow: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1439px) {
+    .key-container{
+        padding: 0.5em;
+        gap: 0.5em;
+
+        button {
+            padding: 0.125em 0.25em 0.075em;
+        }
+    }
+}
+
+@media screen and (max-width: 449px) {
+ .key-container{
+     padding: 0.5em;
+     gap: 0.4em;
+
+     button {
+         padding: 0.125em;
+     }
+ }
+}
